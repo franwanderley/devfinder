@@ -1,13 +1,16 @@
+import { useEffect, useState } from "react";
+import { FaBuilding, FaLink, FaMapMarkerAlt, FaTwitter } from 'react-icons/fa';
 import { ThemeProvider } from 'styled-components';
-import { useState } from "react";
+import Cookie from 'js-cookie';
+
 import { light } from "../styles/theme/light";
 import { Header } from "../components/Header";
 import { Search } from "../components/Search";
 import {
-    DivHome, DivCart, DivInfo, DivUser, DivUserMobile, DivRepo, DivInfoMore, Time
- } from "../styles/home";
-import { FaBuilding, FaLink, FaMapMarkerAlt, FaTwitter } from 'react-icons/fa';
+   DivHome, DivCart, DivInfo, DivUser, DivUserMobile, DivRepo, DivInfoMore, Time
+} from "../styles/home";
 import { GlobalStyle } from "../styles/global";
+import { dark } from "../styles/theme/dark";
 
 const meses = [ 
    "Jan","Feb", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"
@@ -16,6 +19,13 @@ const meses = [
 export function Home(){
    const [theme, setTheme] = useState(light);
    const [user, setUser] = useState();
+
+   useEffect(() =>{
+      setTheme(Cookie.get('devfinder/theme') === 'dark' ? dark : light);
+   }, []);
+   useEffect(() => {
+      Cookie.set('devfinder/theme', theme.name);
+   }, [theme]);
 
    function formatDate(date){
       const data = new Date(date);
