@@ -1,8 +1,8 @@
-<h1>  Move.it 2.0 - NLW</h1>
-<p>É um site para exercitar durante o trabalho ou o estudo, assim como o pomodoro são intervalos de 25 minutos focados nos seus trabalhos e estudos e ao terminar o aplicativo mostrar exercircios simples para cuidar dos seus olhos e do seu corpo.</p>
-<img src="https://raw.githubusercontent.com/franwanderley/devfinder/master/public/devfinder.jpg" alt="resultado do site"/>
-
+<h1>  DevFinder</h1>
 <p>Um sistema simples onde vocẽ pode buscar usuarios do GitHub</p>
+
+<img src="https://raw.githubusercontent.com/franwanderley/devfinder/master/public/definder.jpg" alt="resultado do site"/>
+
 
 <h2> <g-emoji class="g-emoji" alias="rocket" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png">🚀</g-emoji>Tecnologias usadas </h2> 
 <ul>
