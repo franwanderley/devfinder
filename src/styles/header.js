@@ -13,6 +13,12 @@ export const DivHeader = styled.div`
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
+   @media( max-width: 1000px){
+      width: 60%;
+   }
+   @media( max-width:700px){
+      width: 90%;
+   }
 `;
 
 export const BtnTheme = styled.button`

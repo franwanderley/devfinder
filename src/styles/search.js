@@ -8,7 +8,14 @@ export const DivSearch = styled.div`
    background-color: ${({theme}) => theme.card};
    flex-direction: row;
    box-shadow: 1px 1px 1px 1px ${({theme}) => theme.shadow};
-   
+
+   @media( max-width: 1000px){
+      width: 60%;
+   }
+   @media( max-width:700px){
+      width: 90%;
+   }
+
    & svg{
       color: #0075fe;
       width: 20px;

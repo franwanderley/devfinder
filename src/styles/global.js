@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 
    body { 
       max-width: 100vw;
+      background-color: ${({theme}) => theme.background};
    }
 
    @media(max-width : 1080px){

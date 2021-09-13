@@ -1,12 +1,41 @@
 import styled from 'styled-components';
 
 export const DivHome = styled.div`
-   background-color:  ${({theme}) => theme.background};
    height: 100vh;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+`;
+
+export const DivUserMobile = styled.div`
+   display: none;
+   & h3{
+      margin: 0;
+   }
+   & img{
+      width: 79px;
+      height: 79px;
+      border-radius:56px;
+   }
+   & > div{
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+   }
+
+   @media(max-width: 700px){
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+   }
+`;
+ 
+export const Time = styled.p`
+   @media(max-width: 700px){
+      display: none;
+   }
 `;
 
 export const DivCart = styled.div`
@@ -26,7 +55,6 @@ export const DivCart = styled.div`
       height: 112px;
       border-radius:66px;
    }
-
    & h3{
       font-size: .8rem;
       font-weight: 600;
@@ -36,7 +64,25 @@ export const DivCart = styled.div`
       font-size: .6rem;
       color: ${({theme}) => theme.title};
    }
+
+   @media( max-width: 1000px){
+      width: 60%;
+   }
+   @media( max-width: 700px){
+      width: 90%;
+      
+      & > img{
+         display: none;
+      }
+      & h3{
+         font-size: 1rem;
+      }
+      & p{
+         font-size: .8rem;
+      }
+   }
 `;
+
 
 export const DivInfo = styled.div`
    display: flex;
@@ -63,7 +109,10 @@ export const DivUser = styled.div`
       color: #0075fe !important;
       margin-top: 5px;
     }
-   `;
+    @media(max-width: 700px){
+       display: none;
+    }
+`;
 
 export const DivRepo = styled.div`
    display: flex;
@@ -87,7 +136,6 @@ export const DivInfoMore = styled.div`
    align-items:center;
    justify-content: space-between;
    color: ${({theme}) => theme.title};
-   font-size: .6rem;
    
    & div{
       align-items:center;
